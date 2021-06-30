@@ -8,16 +8,20 @@ body {
 	overflow: hidden;
 	margin: 0;
 	background-color: cyan;
+	
 }
 
 #playbutton {
 	z-index: 10;
 	padding:10px;
-	background-color: darkgrey;
+	background-color: grey;
 	font-family: bc;
 	color: black;
 	font-size: 50px;
 	text-decoration: none;
+}
+#playbutton:hover{
+	background-color:darkgrey;
 }
 
 .otherbuttons {
@@ -37,6 +41,12 @@ button:hover {
 	background-color: #009b8c;
 	width: 75px;
 	text-align: center;
+        line-height:25px;
+        position:absolute;
+        width:162.5px;
+}
+#test:hover{
+	background-color: #027b70;
 }
 
 #play {
@@ -122,4 +132,24 @@ button:hover {
 	bottom: 45px;
 	left: 40px;
 }
+#hamster{
+	width:162.5px;
+	height:262px;
+}
+	
+#iconbg{
+	width:100%;
+	height:100%;
+	text-align:center;
+	background-color:cyan;
+	z-index:-1;
+}
+#Scorebox{
+top: 75%;
+	width:50%;
+	left:25%;
+	background-color:grey;
+	font-family:bc;
+	position:absolute;
 
+}
