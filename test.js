@@ -4,7 +4,7 @@ var score = 0;
 var money = 0;
 var count = 0;
 var health = 5; // Temporary value
-//Your wait shall soon be over, a few days it may take.
+//Guess wednesday is the new friday
 //...
 
 function doscore() {
@@ -31,6 +31,10 @@ function doscore() {
 
 	if (health > 0) {
 		document.getElementById("end").innerHTML = `YOUR SCORE: ${score}!`;
+		if (localStorage.getItem("score") == undefined || localStorage.getItem("score") < score){
+			
+		   localStorage.setItem("score",score)
+		}
 		document.getElementById("end2").innerHTML = `Remaining Health: ${health}.`;
 		document.getElementById("test").style.display = "block";
 		document.getElementById("bgdiv").style.backgroundColor = "transparent";
@@ -38,6 +42,11 @@ function doscore() {
 		document.getElementById("bgdiv").style.backgroundColor = "transparent";
 		document.getElementById("end").innerHTML = "YOU RAN OUT OF HEALTH!";
 		document.getElementById("end2").innerHTML = `Final Score: ${score}.`;
+		if (localStorage.getItem("score") == undefined || localStorage.getItem("score") < score){
+			
+		localStorage.setItem("score",score)
+		}
+		
 	}
 }
 
